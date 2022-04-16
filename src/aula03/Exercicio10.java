@@ -16,7 +16,6 @@ public class Exercicio10 {
         SecureRandom numeroAleatorio = new SecureRandom();
 
         int numero = numeroAleatorio.nextInt(1, 11);
-        System.out.println(numero);
 
         int tentativas = 3;
         int palpite;
