@@ -13,7 +13,7 @@ que essas serão pagas em três vezes*/
 import java.util.Scanner;
 
 public class Exercicio07 {
-    static final int NUMERO_DE_TRANSACOES = 3;
+    static final int NUMERO_DE_TRANSACOES = 15;
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
