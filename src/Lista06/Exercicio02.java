@@ -11,7 +11,8 @@ tinta a serem compradas e o preço total.*/
 import java.util.Scanner;
 
 public class Exercicio02 {
-   static final int CAPACIDADE_DA_LATA = 18;
+   static final int CAPACIDADE_DE_COBERTURA_DA_LATA = 18 * 3;
+   static final double PRECO_DA_LATA = 80;
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -19,10 +20,10 @@ public class Exercicio02 {
         System.out.println("Informe o tamanho, em m², da área a ser pintada:");
         int areaASerPintada = entrada.nextInt();
 
-        double qtdLatas = Math.ceil((double) areaASerPintada / CAPACIDADE_DA_LATA);
-        double precoTotal = qtdLatas * 80;
+        double qtdLatas = Math.ceil((double) areaASerPintada / CAPACIDADE_DE_COBERTURA_DA_LATA);
+        double precoTotal = qtdLatas * PRECO_DA_LATA;
 
-        System.out.printf("A quantidade de latas de tintas necessárias para pintar %d m² de área é de %.0f latas\n", areaASerPintada, qtdLatas);
+        System.out.printf("A quantidade de latas de tinta necessárias para pintar %d m² de área é de %.0f lata(s)\n", areaASerPintada, qtdLatas);
         System.out.printf("O preço total para pintar esse área é de R$ %.2f\n", precoTotal);
     }
 }
