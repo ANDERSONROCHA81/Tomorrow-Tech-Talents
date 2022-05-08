@@ -27,7 +27,7 @@ public class Jogador {
         this.dataNascimento = dataNascimento;
         this.numero = numero;
         this.posicao = posicao;
-        this.qualidade = qualidade;
+        this.qualidade = Math.max(qualidade, 0);
         this.cartoesAmarelos = cartoesAmarelos;
         this.cartaoVermelho = cartaoVermelho;
         this.suspenso = suspenso;
@@ -49,6 +49,7 @@ public class Jogador {
     }
 
     void cumprirSuspencao(){
+        System.out.printf("Jogador %s está cumprindo suspensão.\n", this.nome);
         this.cartoesAmarelos = 0;
         this.cartaoVermelho = 0;
         this.suspenso = false;
@@ -82,8 +83,13 @@ public class Jogador {
             this.qualidade += aumentoDaQualidade;
             qtdTreinamentos++;
         }else{
-            System.out.println("Impossível realizar outro treinamento!");
+            System.out.printf("Impossível o jogador %s realizar outro treinamento!\n", this.nome);
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s: %d - %s (%s) - %s CONDIÇÃO: %s", this.posicao, this.numero, this.nome, this.apelido, this.dataNascimento, this.verificarCondicaoDeJogo() ? "NÃO PODE JOGAR" : "PODE JOGAR");
     }
 }
