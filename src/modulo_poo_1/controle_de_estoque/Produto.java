@@ -1,23 +1,20 @@
 package modulo_poo_1.controle_de_estoque;
 
 public class Produto {
+    private int id;
     private String nome;
     private String sessao;
     private String tipo;
     private int quantidade;
     private String marca;
-    private static int identificador = 0;
+    private static int incrementaId = 0;
 
     public Produto() {
-        incrementaIdentificador();
+        this.id = ++incrementaId;
     }
 
-    private static void incrementaIdentificador(){
-        identificador++;
-    }
-
-    public static int getIdentificador() {
-        return identificador;
+    public int getId() {
+        return id;
     }
 
     public String getNome() {
