@@ -9,8 +9,9 @@ public class Funcionario extends Pessoa{
         this.cargo = cargo;
         if (salario < 0){
             this.salario = 0;
+        }else {
+            this.salario = salario;
         }
-        this.salario = salario;
     }
 
     public String getCargo() {
@@ -26,7 +27,11 @@ public class Funcionario extends Pessoa{
     }
 
     public void setSalario(double salario) {
-        this.salario = salario;
+        if (salario < 0){
+            this.salario = 0;
+        }else {
+            this.salario = salario;
+        }
     }
 
     @Override
