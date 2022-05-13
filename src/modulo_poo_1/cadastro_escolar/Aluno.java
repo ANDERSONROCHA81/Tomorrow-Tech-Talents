@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Aluno extends Pessoa{
     private int idade;
-    private String turma;
+    private Turma turma;
     private List<Disciplina> disciplinas;
 
-    public Aluno(String nome, String cpf, String rg, int idade, String turma) {
+    public Aluno(String nome, String cpf, String rg, int idade, Turma turma) {
         super(nome, cpf, rg);
         this.idade = idade;
         this.turma = turma;
@@ -23,11 +23,11 @@ public class Aluno extends Pessoa{
         this.idade = idade;
     }
 
-    public String getTurma() {
+    public Turma getTurma() {
         return turma;
     }
 
-    public void setTurma(String turma) {
+    public void setTurma(Turma turma) {
         this.turma = turma;
     }
 
