@@ -35,8 +35,24 @@ public class Aluno extends Pessoa{
         return disciplinas;
     }
 
-    public void adicionaDisciplina(Disciplina disciplina) {
+    public void adicionarDisciplina(Disciplina disciplina) {
         this.disciplinas.add(disciplina);
+    }
+
+    public void removerDisciplina(String nomeDaDisciplina) {
+        boolean temDisciplina = false;
+
+        for (Disciplina disciplina : this.disciplinas) {
+            if (disciplina.getNomeDaDisciplina().equalsIgnoreCase(nomeDaDisciplina)) {
+                this.disciplinas.remove(disciplina);
+                temDisciplina = true;
+                break;
+            }
+        }
+
+        if (!temDisciplina){
+            System.out.printf("O aluno %s não paga a disciplina de %s.\n", this.getNome(), nomeDaDisciplina);
+        }
     }
 
     @Override

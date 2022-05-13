@@ -37,8 +37,9 @@ public class Disciplina {
         this.nota2 = nota2;
     }
 
-    public double calculaMedia() {
-        return (this.getNota1() + this.getNota2() / 2);
+    public double calcularMedia() {
+        this.media = (this.getNota1() + this.getNota2() / 2);
+        return this.media;
     }
 
     @Override

@@ -17,16 +17,48 @@ public class Professor extends Funcionario{
         return turmas;
     }
 
-    public void adicionaTurma(Turma turma) {
+    public void adicionarTurma(Turma turma) {
         this.turmas.add(turma);
+    }
+
+    public void removerTurma(String codigoDaTurma) {
+        boolean temTurma = false;
+
+        for (Turma turma : this.turmas) {
+            if (turma.getCodigo().equalsIgnoreCase(codigoDaTurma)) {
+                this.turmas.remove(turma);
+                temTurma = true;
+                break;
+            }
+        }
+
+        if (!temTurma){
+            System.out.printf("O professor %s não leciona a turma com código %s.\n", this.getNome(), codigoDaTurma);
+        }
     }
 
     public List<Disciplina> getDisciplinas() {
         return disciplinas;
     }
 
-    public void adicionaDisciplina(Disciplina disciplina) {
+    public void adicionarDisciplina(Disciplina disciplina) {
         this.disciplinas.add(disciplina);
+    }
+
+    public void removerDisciplina(String nomeDaDisciplina) {
+        boolean temDisciplina = false;
+
+        for (Disciplina disciplina : this.disciplinas) {
+            if (disciplina.getNomeDaDisciplina().equalsIgnoreCase(nomeDaDisciplina)) {
+                this.disciplinas.remove(disciplina);
+                temDisciplina = true;
+                break;
+            }
+        }
+
+        if (!temDisciplina){
+            System.out.printf("O professor %s não leciona a disciplina de %s.\n", this.getNome(), nomeDaDisciplina);
+        }
     }
 
     @Override
