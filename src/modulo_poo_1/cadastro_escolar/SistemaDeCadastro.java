@@ -1,12 +1,13 @@
 package modulo_poo_1.cadastro_escolar;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class SistemaDeCadastro {
-    private List<Aluno> alunos;
-    private List<Funcionario> funcionarios;
-    private List<Professor> professores;
+    private List<Aluno> alunos = new ArrayList<>();
+    private List<Funcionario> funcionarios = new ArrayList<>();
+    private List<Professor> professores = new ArrayList<>();
 
     public void listarAlunos() {
         for (Aluno aluno : alunos) {

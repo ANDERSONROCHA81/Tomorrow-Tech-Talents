@@ -6,6 +6,10 @@ public class Disciplina {
     private double nota2;
     private double media;
 
+    public Disciplina(String nomeDaDisciplina) {
+        this.nomeDaDisciplina = nomeDaDisciplina;
+    }
+
     public Disciplina(String nomeDaDisciplina, double nota1, double nota2) {
         this.nomeDaDisciplina = nomeDaDisciplina;
         this.nota1 = nota1;
@@ -38,7 +42,7 @@ public class Disciplina {
     }
 
     public double calcularMedia() {
-        this.media = (this.getNota1() + this.getNota2() / 2);
+        this.media = (this.getNota1() + this.getNota2()) / 2;
         return this.media;
     }
 
