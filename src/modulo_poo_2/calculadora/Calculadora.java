@@ -1,7 +1,5 @@
-package modulo_poo_2;
+package modulo_poo_2.calculadora;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Calculadora {

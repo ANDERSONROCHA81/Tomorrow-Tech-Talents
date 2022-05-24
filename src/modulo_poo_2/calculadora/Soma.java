@@ -1,4 +1,4 @@
-package modulo_poo_2;
+package modulo_poo_2.calculadora;
 
 public class Soma implements Calculo{
     @Override
