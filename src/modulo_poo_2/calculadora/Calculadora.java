@@ -30,6 +30,20 @@ public class Calculadora {
 
                resultado = soma.calcular(numeros);
                 System.out.printf("O resultado da soma dos números informados é %.2f\n", resultado);
+            } else if (opcao == 2){
+                Subtracao subtracao = new Subtracao();
+                int escolha;
+                System.out.println("Informe quantos números deseja subtrair:");
+                escolha = entrada.nextInt();
+                double[] numeros = new double[escolha];
+
+                for (int i = 0; i < escolha; i++) {
+                    System.out.printf("Informe o %dº número:\n", i + 1);
+                    numeros[i] = entrada.nextDouble();
+                }
+
+                resultado = subtracao.calcular(numeros);
+                System.out.printf("O resultado da subtração dos números informados é %.2f\n", resultado);
             }
 
         }while (opcao != 5);
