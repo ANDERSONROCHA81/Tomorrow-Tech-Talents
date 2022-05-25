@@ -44,6 +44,20 @@ public class Calculadora {
 
                 resultado = subtracao.calcular(numeros);
                 System.out.printf("O resultado da subtração dos números informados é %.2f\n", resultado);
+            } else if (opcao == 3){
+                Multiplicacao multiplicacao = new Multiplicacao();
+                int escolha;
+                System.out.println("Informe quantos números deseja multiplicar:");
+                escolha = entrada.nextInt();
+                double[] numeros = new double[escolha];
+
+                for (int i = 0; i < escolha; i++) {
+                    System.out.printf("Informe o %dº número:\n", i + 1);
+                    numeros[i] = entrada.nextDouble();
+                }
+
+                resultado = multiplicacao.calcular(numeros);
+                System.out.printf("O resultado da multiplicação dos números informados é %.2f\n", resultado);
             }
 
         }while (opcao != 5);
