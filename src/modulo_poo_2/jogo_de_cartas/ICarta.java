@@ -4,4 +4,6 @@ public interface ICarta {
     String getNome();
     TipoDeCarta getTipo();
     int getCusto();
+    int getPoder();
+    int getResistencia();
 }
