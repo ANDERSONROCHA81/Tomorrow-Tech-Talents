@@ -1,22 +1,39 @@
 package modulo_poo_2.jogo_de_cartas;
 
-public class CartaDeAtaque extends Carta implements ICarta{
-    private int poder;
-    private int resistencia;
+public class CartaDeAtaque extends Carta implements ICarta {
+    protected int poder;
+    protected int resistencia;
 
     public CartaDeAtaque(String nome, TipoDeCarta tipo, int custo, int poder, int resistencia) {
-        super(nome, tipo, custo);
+        this.nome = nome;
+        this.tipo = tipo;
+        this.custo = custo;
         this.poder = poder;
         this.resistencia = resistencia;
     }
 
     @Override
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public TipoDeCarta getTipo() {
+        return tipo;
+    }
+
+    @Override
+    public int getCusto() {
+        return custo;
+    }
+
+    @Override
     public int getPoder() {
-        return this.poder;
+        return poder;
     }
 
     @Override
     public int getResistencia() {
-        return this.resistencia;
+        return resistencia;
     }
 }
