@@ -1,8 +1,11 @@
 package modulo_poo_2.jogo_de_cartas;
 
-public class TabuleiroVersus implements ITabuleiro{
-    Carta[] deck1 = new Carta[50];
-    Carta[] deck2 = new Carta[50];
+public class TabuleiroParty implements ITabuleiro{
+    Carta[] deck1 = new Carta[80];
+    Carta[] deck2 = new Carta[80];
+    Carta[] deck3 = new Carta[80];
+    Carta[] deck4 = new Carta[80];
+    Carta[] deck5 = new Carta[80];
 
     @Override
     public void inserirDeck() {
