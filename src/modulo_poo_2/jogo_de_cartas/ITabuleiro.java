@@ -1,7 +1,7 @@
 package modulo_poo_2.jogo_de_cartas;
 
-public interface Tabuleiro {
+public interface ITabuleiro {
     void inserirDeck();
     void verificarCartaDeAtaque(CartaDeAtaque cartaDeAtaque);
-    void verificarVencedor(Jogador jogador);
+    void verificarVencedor(Jogador ... jogadores);
 }
