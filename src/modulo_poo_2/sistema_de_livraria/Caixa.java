@@ -4,7 +4,7 @@ public class Caixa implements ICaixa {
 
     private double dinheiroNoCaixa = 0.0;
     @Override
-    public void adicionarDinheiroAoCaixa() {
+    public void adicionarDinheiroAoCaixa(double valor) {
 
     }
 

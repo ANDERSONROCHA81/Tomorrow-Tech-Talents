@@ -16,4 +16,11 @@ public class Livraria {
     public ICaixa getCaixa() {
         return caixa;
     }
+
+    public void vender(Cliente cliente, Produto produto, int quantidade) {
+        double valor = produto.getPreco() * quantidade;
+        produto.setQuantidade(quantidade);
+        this.caixa.adicionarDinheiroAoCaixa(valor);
+        cliente.adicionarProduto(produto);
+    }
 }
