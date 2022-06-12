@@ -6,7 +6,7 @@ public abstract class Produto {
     private double preco;
     private int quantidade;
 
-    public Produto(String nome, double preco, int quantidade) {
+    protected Produto(String nome, double preco, int quantidade) {
         this.nome = nome;
         this.id = System.currentTimeMillis();
         this.preco = preco;

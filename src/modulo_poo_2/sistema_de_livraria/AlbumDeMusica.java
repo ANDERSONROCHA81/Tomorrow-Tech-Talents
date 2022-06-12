@@ -18,24 +18,36 @@ public class AlbumDeMusica extends Produto{
         return bandas;
     }
 
-    public void setBandas(List<String> bandas) {
-        this.bandas = bandas;
+    public void adicionarBanda(String banda) {
+        this.bandas.add(banda);
+    }
+
+    public void removerBanda(String banda) {
+        this.bandas.remove(banda);
     }
 
     public List<String> getGeneros() {
         return generos;
     }
 
-    public void setGeneros(List<String> generos) {
-        this.generos = generos;
+    public void adicionarGenero(String genero) {
+        this.generos.add(genero);
+    }
+
+    public void removerGenero(String genero) {
+        this.generos.remove(genero);
     }
 
     public List<String> getSelos() {
         return selos;
     }
 
-    public void setSelos(List<String> selos) {
-        this.selos = selos;
+    public void adicionarSelo(String selo) {
+        this.selos.add(selo);
+    }
+
+    public void removerSelo(String selo) {
+        this.selos.remove(selo);
     }
 
     @Override

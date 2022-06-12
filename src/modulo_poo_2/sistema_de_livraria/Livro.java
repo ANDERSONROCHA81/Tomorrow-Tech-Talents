@@ -18,8 +18,12 @@ public class Livro extends Produto{
         return generos;
     }
 
-    public void setGeneros(List<String> generos) {
-        this.generos = generos;
+    public void adicionarGenero(String genero) {
+        this.generos.add(genero);
+    }
+
+    public void removerGenero(String genero) {
+        this.generos.remove(genero);
     }
 
     public String getEscritor() {

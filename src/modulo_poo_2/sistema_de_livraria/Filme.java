@@ -28,24 +28,36 @@ public class Filme extends Produto{
         return diretores;
     }
 
-    public void setDiretores(List<String> diretores) {
-        this.diretores = diretores;
+    public void adicionarDiretor(String diretor) {
+        this.diretores.add(diretor);
+    }
+
+    public void removerDiretor(String diretor) {
+        this.diretores.remove(diretor);
     }
 
     public List<String> getGeneros() {
         return generos;
     }
 
-    public void setGeneros(List<String> generos) {
-        this.generos = generos;
+    public void adicionarGenero(String genero) {
+        this.generos.add(genero);
+    }
+
+    public void removerGenero(String genero) {
+        this.generos.remove(genero);
     }
 
     public List<String> getProdutores() {
         return produtores;
     }
 
-    public void setProdutores(List<String> produtores) {
-        this.produtores = produtores;
+    public void adicionarProdutor(String produtor) {
+        this.produtores.add(produtor);
+    }
+
+    public void removerProdutor(String produtor) {
+        this.produtores.remove(produtor);
     }
 
     @Override
