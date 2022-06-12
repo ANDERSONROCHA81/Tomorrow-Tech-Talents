@@ -8,7 +8,7 @@ public class Estoque implements IEstoque {
     private List<Produto> produtosEstocados = new ArrayList<>();
     @Override
     public void adicionarProduto(Produto produto) {
-
+        
     }
 
     @Override
