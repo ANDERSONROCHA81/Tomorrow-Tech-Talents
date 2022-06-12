@@ -1,6 +1,11 @@
 package modulo_poo_2.sistema_de_livraria;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Estoque implements IEstoque {
+
+    private List<Produto> produtosEstocados = new ArrayList<>();
     @Override
     public void adicionarProduto(Produto produto) {
 
