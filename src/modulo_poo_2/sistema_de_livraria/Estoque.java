@@ -37,7 +37,7 @@ public class Estoque implements IEstoque {
 
     @Override
     public void listarProdutosDoEstoque() {
-
+        this.produtosEstocados.forEach(System.out::println);
     }
 
     @Override

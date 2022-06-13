@@ -16,10 +16,13 @@ public class SistemaDeLivraria {
 
         livraria.getEstoque().adicionarProduto(brinquedo);
         livraria.getEstoque().adicionarProduto(filme);
+        livraria.getEstoque().verProduto(albumDeMusica);
         livraria.getEstoque().adicionarProduto(jogo);
         livraria.getEstoque().adicionarProduto(livro);
         livraria.getEstoque().adicionarProduto(albumDeMusica);
 
         livraria.getEstoque().verProduto(albumDeMusica);
+        livraria.getEstoque().listarProdutosDoMesmoTipo(albumDeMusica);
+        livraria.getEstoque().listarProdutosDoEstoque();
     }
 }
