@@ -52,7 +52,7 @@ public class AlbumDeMusica extends Produto{
 
     @Override
     public String toString() {
-        return super.toString() + "AlbumDeMusica{" +
+        return "AlbumDeMusica{" + super.toString() +
                 "bandas=" + bandas +
                 ", generos=" + generos +
                 ", selos=" + selos +

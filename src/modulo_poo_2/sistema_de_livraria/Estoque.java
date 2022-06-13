@@ -8,12 +8,12 @@ public class Estoque implements IEstoque {
     private List<Produto> produtosEstocados = new ArrayList<>();
     @Override
     public void adicionarProduto(Produto produto) {
-        
+        this.produtosEstocados.add(produto);
     }
 
     @Override
     public void removerProduto(Produto produto) {
-
+        this.produtosEstocados.remove(produto);
     }
 
     @Override
@@ -23,7 +23,11 @@ public class Estoque implements IEstoque {
 
     @Override
     public void verProduto(Produto produto) {
-
+        if (this.produtosEstocados.contains(produto)){
+            System.out.println(produto);
+        }else {
+            System.out.println("Não existe esse produto no nosso estoque.");
+        }
     }
 
     @Override

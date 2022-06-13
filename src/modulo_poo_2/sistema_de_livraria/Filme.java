@@ -62,7 +62,7 @@ public class Filme extends Produto{
 
     @Override
     public String toString() {
-        return super.toString() + "Filme{" +
+        return "Filme{" + super.toString() +
                 "estudio='" + estudio + '\'' +
                 ", diretores=" + diretores +
                 ", generos=" + generos +

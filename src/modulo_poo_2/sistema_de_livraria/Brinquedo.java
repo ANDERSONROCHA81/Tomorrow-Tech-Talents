@@ -18,7 +18,7 @@ public class Brinquedo extends Produto{
 
     @Override
     public String toString() {
-        return super.toString() + "Brinquedo{" +
+        return "Brinquedo{" + super.toString() +
                 "tipo='" + tipo + '\'' +
                 '}';
     }

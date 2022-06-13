@@ -38,7 +38,7 @@ public class Jogo extends Produto{
 
     @Override
     public String toString() {
-        return super.toString() + "Jogo{" +
+        return "Jogo{" + super.toString() +
                 "distribuidora='" + distribuidora + '\'' +
                 ", genero='" + genero + '\'' +
                 ", estudio='" + estudio + '\'' +
