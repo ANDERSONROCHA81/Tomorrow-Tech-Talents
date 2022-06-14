@@ -2,6 +2,8 @@ package modulo_poo_2.sistema_de_livraria;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Estoque implements IEstoque {
 
@@ -17,9 +19,9 @@ public class Estoque implements IEstoque {
     }
 
     @Override
-    public void alterarProduto(Produto produto) {
-
-    }
+        public void alterarProduto(Produto produto) {
+    
+        }
 
     @Override
     public void verProduto(Produto produto) {
@@ -42,6 +44,9 @@ public class Estoque implements IEstoque {
 
     @Override
     public void listarProdutosPorCategoria() {
-
+        Map<? extends Class<? extends Produto>, List<Produto>> porCategoria = this.produtosEstocados
+                .stream()
+                .collect(Collectors.groupingBy(Produto::getClass, Collectors.toList()));
+        System.out.println(porCategoria);
     }
 }
